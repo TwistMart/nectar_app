@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:grocer_test/pages/favourite/favourite_page.dart';
 import 'package:grocer_test/pages/widgets/dimensions.dart';
 import 'package:grocer_test/pages/widgets/grocery_item_tile.dart';
 import 'package:grocer_test/pages/widgets/widget_getters.dart';
+import 'package:get/get.dart';
 
 class HomePage extends StatelessWidget {
   HomePage({super.key});
@@ -11,7 +13,6 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
       body: SafeArea(
         child: Column(
           children: [
@@ -29,13 +30,17 @@ class HomePage extends StatelessWidget {
             Container(
               height: 45,
               width: 400,
+              decoration:
+                  BoxDecoration(borderRadius: BorderRadius.circular(10)),
               child: TextFormField(
                 controller: searchController,
                 onChanged: (value) {
                   print('printed searchProducts');
                 },
                 decoration: InputDecoration(
-                  hintText: 'search for all offers provided ',
+                  prefixIcon: Icon(Icons.search),
+                  prefixIconColor: Colors.black,
+                  hintText: 'search Store ',
                   labelStyle: TextStyle(color: Colors.grey),
                   hintStyle: TextStyle(color: Colors.grey),
                   border: OutlineInputBorder(
@@ -66,11 +71,11 @@ class HomePage extends StatelessWidget {
               itemBuilder: (context, index) {
                 return GroceryItemTile(
                   itemName: shopItems[index][0],
-                  itemPrice: shopItems[index][1],
-                  imagePath: shopItems[index][2],
-                  color: shopItems[index][3],
+                  imagePath: shopItems[index][1],
+                  color: shopItems[index][2],
                   onPressed: () {
                     print("add to cart");
+                    Get.to(() => FavouritePage());
                   },
                 );
               },

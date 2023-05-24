@@ -44,8 +44,8 @@ class FavouritePage extends StatelessWidget {
 
               Container(
                 // alignment: Alignment.bottomCenter,
-                margin: EdgeInsets.only(left: 15, right: 15),                                        
-                height: 40,
+                margin: EdgeInsets.only(left: 25, right: 25),                                        
+                height: 50,
                 width: double.maxFinite,
                 decoration: BoxDecoration(
                     borderRadius:
@@ -53,11 +53,11 @@ class FavouritePage extends StatelessWidget {
                     color: AppColors.buttonColor),
                 child: TextButton(
                   onPressed: () {
-                    print('add to cart');
+                    print('add  all to cart');
                     // print(productController.addItems(product));
                   },
                   child: Text(
-                     "Add to cart",
+                     "Add  all to cart",
                      style: TextStyle(
                     color: Colors.white,
 

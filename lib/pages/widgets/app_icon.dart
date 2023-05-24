@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class AppIcon extends StatelessWidget {
   final IconData icon;
-  Color backgroundColor;
+  // Color backgroundColor;
   final Color iconColor;
   final double size;
   final double iconSize;
@@ -10,10 +10,10 @@ class AppIcon extends StatelessWidget {
   AppIcon(
       {super.key,
       required this.icon, // required one
-      this.backgroundColor = const Color(0xFFfcf4e4),
+      // this.backgroundColor = Colors.white70,
       this.iconColor = Colors.grey,
       this.size = 40, // default icon container size
-      this.iconSize=16 // it is optional with .backgroundColor, iconColor, size,iconSize 
+      this.iconSize=30 // it is optional with .backgroundColor, iconColor, size,iconSize 
       }
     );
 
@@ -24,7 +24,7 @@ class AppIcon extends StatelessWidget {
       height: size, // size 40
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(size / 2),
-          color: backgroundColor
+          // color: backgroundColor
         ),
       child: Icon(                   
         icon,

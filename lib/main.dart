@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:grocer_test/pages/explore/explore_page.dart';
 import 'package:grocer_test/pages/home/home_page.dart';
 import 'package:get/get.dart';
+import 'package:grocer_test/pages/splash/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());

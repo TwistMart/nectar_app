@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:grocer_test/pages/splash/splash_page.dart';
 import 'package:grocer_test/pages/widgets/colors.dart';
 import 'package:get/get.dart';
+import 'package:flutter_vector_icons/flutter_vector_icons.dart';
+
 
 class SplashScreen extends StatelessWidget {
   @override
@@ -11,7 +13,8 @@ class SplashScreen extends StatelessWidget {
         fit: StackFit.expand,
         children: [
           Image.asset(
-            'lib/images/grocery_man.jpg',
+            // 'lib/images/grocery_man.jpg',
+            'lib/images/Man-holding-pepper-and-shopping-bag.jpg',
             fit: BoxFit.cover,
           ),
           Container(
@@ -19,35 +22,37 @@ class SplashScreen extends StatelessWidget {
           ),
           Column(
             children: [
-              Expanded(
-                child: Container(
-                  height: 40,
-                  width: 40,
-                  alignment: Alignment.bottomCenter,
-                  child: Image.asset(
-                    'lib/images/carrot.png',
-                  ),
-                ),
+              Spacer( flex: 1),
+              Icon(
+                Icons.local_grocery_store_sharp,
+                color: Colors.white,
+                size: 30,
+                
               ),
+
               Expanded(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(
-                      'Welcome to our store',
-                      style: TextStyle(
-                        fontSize: 24,
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                      ),
+                 RichText(
+                  text: TextSpan(
+                    style: TextStyle(
+                      fontSize: 24,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
                     ),
-                    SizedBox(height: 15),
+                    children: [
+                      TextSpan(text: 'Welcome\n'),
+                      TextSpan(text: 'to our store'),
+                    ],
+                  ),
+                ),
+                                    SizedBox(height: 15),
                     Text(
                       'Ger your groceries in as fast as one hour',
                       style: TextStyle(
-                        fontSize: 14,
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
+                        fontSize: 12,
+                        color: Colors.grey,
                       ),
                     ),
                     SizedBox(height: 20),
@@ -61,8 +66,7 @@ class SplashScreen extends StatelessWidget {
                           color: AppColors.buttonColor),
                       child: TextButton(
                         onPressed: () {
-                          Get.to(() => SplashPage);
-                          // print(productController.addItems(product));
+                          Get.to(() => SplashPage());
                         },
                         child: Text(
                           "Get started",

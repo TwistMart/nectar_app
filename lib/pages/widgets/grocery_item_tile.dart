@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class GroceryItemTile extends StatelessWidget {
   final String itemName;
-  final String itemPrice;
+  // final String itemPrice;
   final String imagePath;
   final color;
   void Function()? onPressed;
@@ -10,7 +10,7 @@ class GroceryItemTile extends StatelessWidget {
   GroceryItemTile({
     super.key,
     required this.itemName,
-    required this.itemPrice,
+    // required this.itemPrice,
     required this.imagePath,
     required this.color,
     required this.onPressed,
@@ -30,31 +30,34 @@ class GroceryItemTile extends StatelessWidget {
             // image
             Image.asset(
               imagePath,
-              height: 64,
+              height: 80,
+              
             ),
 
-            const SizedBox(
-              height: 15,
-            ),
+            Spacer(),
 
-            // item name
-            Text(
+         
+           Text(
               itemName,
-            ),
-
-            const Spacer(),
-
-            // price + button
-            MaterialButton(
-              onPressed: onPressed, // or  child: Text('\$' + itemPrice),
-              color: color,
-              child: Text(
-                '\$$itemPrice',
-                style: const TextStyle(
-                    color: Colors.white, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                fontSize: 14,
+                fontWeight: FontWeight.bold,
+                color: Colors.black
               ),
             ),
-            const Spacer(),
+
+            Spacer(),
+
+
+            // price + button
+            // MaterialButton(
+            //   onPressed: onPressed, 
+            //   color: color,
+            //   child: Text(
+            //     'Access Favourite'
+            //   ),
+            // ),
+            // const Spacer(),
           ],
         ),
       ),

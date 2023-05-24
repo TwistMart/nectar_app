@@ -1,21 +1,38 @@
 import 'package:flutter/material.dart';
+import 'package:grocer_test/pages/widgets/colors.dart';
 
 get shopItems => _shopItems;
 
 
    final List _shopItems = [
-    // itemName, itemPrice, imagePath, color
-    ["bakery and snacks", "4.00", "lib/images/bakery and snacks.jpg", Colors.green],
-    ["beverages", "2.50", "lib/images/beverages.jpg", Colors.yellow],
-    ["cooking oil and ghee", "3.50", "lib/images/cooking oil and ghee.jpg", Colors.brown],
-    ["dairy and eggs", "3.00", "lib/images/dairy and eggs.jpg", Colors.blue],
-    ["frash fruits and vegetables", "3.00", "lib/images/frash fruits and vegetables.jpg", Colors.orange],
-    ["grape_juice", "3.00", "lib/images/grape_juice.jpg", Colors.teal],
-    ["meat and fish", "3.00", "lib/images/meat and fish.jpg", Colors.brown],
-
-
+    ["frash fruits and vegetables", "lib/images/frash fruits and vegetables.jpg", Colors.tealAccent ],
+    ["cooking oil and ghee", "lib/images/cooking oil and ghee.jpg", Colors.brown],
+    ["meat and fish", "lib/images/meat and fish.jpg", Colors.brown],
+    ["dairy and eggs",  "lib/images/dairy and eggs.jpg", Colors.lime],
+    ["beverages",  "lib/images/beverages.jpg", Colors.indigo],
+    ["bakery and snacks",  "lib/images/bakery and snacks.jpg", Colors.purple],
+    ["grape_juice", "lib/images/grape_juice.jpg", Colors.indigo],
+    // repeat 
+    ["frash fruits and vegetables", "lib/images/frash fruits and vegetables.jpg", Colors.tealAccent ],
+    ["cooking oil and ghee", "lib/images/cooking oil and ghee.jpg", Colors.brown],
+    ["meat and fish", "lib/images/meat and fish.jpg", Colors.brown],
+    ["dairy and eggs",  "lib/images/dairy and eggs.jpg", Colors.lime],
+    ["beverages",  "lib/images/beverages.jpg", Colors.indigo],
+    ["bakery and snacks",  "lib/images/bakery and snacks.jpg", Colors.purple],
+    ["grape_juice", "lib/images/grape_juice.jpg", Colors.indigo],
 
   ];
+
+
+  // final List _shopItems = [
+  //   ["frash fruits and vegetables", "lib/images/frash fruits and vegetables.jpg", AppColors.FrashFruitsAndVegetables],
+  //   ["cooking oil and ghee", "lib/images/cooking oil and ghee.jpg", AppColors.CookingOilAndGhee],
+  //   ["meat and fish", "lib/images/meat and fish.jpg", AppColors.MeatAndFish],
+  //   ["bakery and snacks",  "lib/images/bakery and snacks.jpg", AppColors.BackeryAndSnacks],
+  //   ["dairy and eggs",  "lib/images/dairy and eggs.jpg", AppColors.DairyAndEggs],
+  //   ["beverages",  "lib/images/beverages.jpg", AppColors.Beverages],
+ 
+  // ];
 
 
   get favouriteItems => _favouriteItems;

@@ -7,6 +7,7 @@ import 'package:grocer_test/pages/shop/shop_page.dart';
 import 'package:grocer_test/pages/splash/splash_page.dart';
 import 'package:grocer_test/pages/splash/splash_screen.dart';
 import 'package:grocer_test/pages/widgets/app_icon.dart';
+import 'package:grocer_test/pages/widgets/colors.dart';
 
 
 class MainPage extends StatefulWidget {
@@ -46,8 +47,10 @@ class _MainPageState extends State<MainPage> {
       body: pages[_unselectedIndex], // Get.arguments is the index of the page
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _unselectedIndex,
-        showSelectedLabels: false,
-        showUnselectedLabels: false,
+        showSelectedLabels: true,
+        showUnselectedLabels: true,
+        backgroundColor: Colors.white,
+        selectedItemColor: AppColors.buttonColor,        
         onTap: OnTap,
         items: [
           BottomNavigationBarItem(
@@ -57,11 +60,12 @@ class _MainPageState extends State<MainPage> {
           ),
           BottomNavigationBarItem(
             icon: AppIcon(icon: Icons.search_outlined),
-            // activeIcon: AppIcon(icon: Icons.search),
+
+
             label: 'Explore',
           ),
           BottomNavigationBarItem(
-            icon: AppIcon(icon: Icons.shopping_cart_rounded),
+            icon: AppIcon(icon: Icons.local_grocery_store_sharp),
             // activeIcon: AppIcon(icon: Icons.notifications),
             label: 'Cart',
           ),
@@ -71,7 +75,11 @@ class _MainPageState extends State<MainPage> {
             label: 'Favourite',
           ),
           BottomNavigationBarItem(
-            icon: AppIcon(icon: Icons.person),
+
+
+            
+            
+           icon: AppIcon(icon: Icons.person),
             // activeIcon: AppIcon(icon: Icons.person),
             label: 'Account',
           ),

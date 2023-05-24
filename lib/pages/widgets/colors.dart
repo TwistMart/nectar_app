@@ -17,6 +17,11 @@ class AppColors {
   static final Color DairyAndEggs = const Color(0xffFDE598);
   static final Color Beverages = const Color(0xffFB7DFF5);
 
+
+  
+static final Color MeatAndFishLight = MeatAndFish.withOpacity(0.5); // Lighter shade
+static final Color MeatAndFishDark = MeatAndFish.withOpacity(0.8); // Darker shade
+
   
 }
 

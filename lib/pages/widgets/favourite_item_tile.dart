@@ -22,6 +22,7 @@ class FavouriteItemTile extends StatelessWidget {
           border: Border(
             top: BorderSide(
               width: 0.3,
+              style: BorderStyle.solid ,              
               color: Colors.grey
             ),
             bottom: BorderSide(
@@ -51,29 +52,38 @@ class FavouriteItemTile extends StatelessWidget {
               ),
               
 
-              Container(
-                child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(itemName),
-                      Text(description),
-                    ]),
-              ),
-              SizedBox(
-                width: 60,
-              ),
               Expanded(
-                child: Row(
-                  children: [
-                 
-                    Text('\$$itemPrice'),
-                    SizedBox(
-                      width: 5,
-                    ),
-                    Icon(Icons.arrow_forward_ios_sharp)
-                  ],
+                child: Container(
+                  child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(itemName, style: TextStyle(
+                          fontSize: 13,
+                          fontWeight: FontWeight.bold,
+                        )),
+                        Text(description),
+                      ]),
                 ),
+              ),
+              
+              Row(
+                children: [
+               
+                  Text('\$$itemPrice',  style: TextStyle(
+                          fontSize: 13,
+                          fontWeight: FontWeight.bold,
+                        )  ),
+                  SizedBox(
+                    width: 5,
+                  ),
+                  Icon (
+                    Icons.arrow_forward_ios_sharp,
+                    size: 12,
+                    color: Colors.black,
+                    
+                    )
+                ],
               )
             ])));
   }
