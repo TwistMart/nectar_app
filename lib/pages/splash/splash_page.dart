@@ -18,7 +18,7 @@ class _SplashPageState extends State<SplashPage> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Padding(
-        padding: const EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(30),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -38,7 +38,7 @@ class _SplashPageState extends State<SplashPage> {
             RichText(
               text: TextSpan(
                 style: TextStyle(
-                    fontSize: 18,
+                    fontSize: Dimensions.font18,
                     fontWeight: FontWeight.bold,
                     fontFamily: 'Gilroy',
                     color: Colors.black),
@@ -106,7 +106,7 @@ class _SplashPageState extends State<SplashPage> {
                     width: Dimensions.width5,
                   ),
                   Container(
-                    width: Dimensions.width25*Dimensions.width10,
+                    width: Dimensions.width15*Dimensions.width10,
                     height: Dimensions.screenHeight / Dimensions.font13,
                     child: Center(child: Text('Continue with Google', style:
                      TextStyle( fontFamily: 'Gilroy')
@@ -120,10 +120,12 @@ class _SplashPageState extends State<SplashPage> {
               height: Dimensions.height20,
             ),
             ElevatedButton(
+
               onPressed: () {
                 Get.to(() => HomePage());
               },
               style: ButtonStyle(
+
                 backgroundColor:
                     MaterialStateProperty.all(AppColors.FacebookbuttonColor),
                 shape: MaterialStateProperty.all(
@@ -140,14 +142,22 @@ class _SplashPageState extends State<SplashPage> {
                   SizedBox(
                     width: Dimensions.width5,
                   ),
+
+                  
                   Container(
-                    width: Dimensions.width25*Dimensions.width10,
+                    width: Dimensions.width15*Dimensions.width10,
                     height: Dimensions.screenHeight / Dimensions.font13,
                     child: Center(child: Text('Continue with Facebook', 
                     style:
                      TextStyle( fontFamily: 'Gilroy')
                     )),
                   ),
+               
+
+               
+
+
+
                 ],
               ),
             ),
