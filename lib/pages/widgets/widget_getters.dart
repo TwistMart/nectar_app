@@ -5,13 +5,13 @@ get shopItems => _shopItems;
 
 
    final List _shopItems = [
-    ["frash fruits and vegetables", "lib/images/frash fruits and vegetables.jpg", Colors.tealAccent ],
-    ["cooking oil and ghee", "lib/images/cooking oil and ghee.jpg", Colors.brown],
-    ["meat and fish", "lib/images/meat and fish.jpg", Colors.brown],
-    ["dairy and eggs",  "lib/images/dairy and eggs.jpg", Colors.lime],
-    ["beverages",  "lib/images/beverages.jpg", Colors.indigo],
-    ["bakery and snacks",  "lib/images/bakery and snacks.jpg", Colors.purple],
-    ["grape_juice", "lib/images/grape_juice.jpg", Colors.indigo],
+    ["Frash Fruits and Vegetables", "lib/images/frash fruits and vegetables.jpg", Colors.tealAccent ],
+    ["Cooking Oil and Ghee", "lib/images/cooking oil and ghee.jpg", Colors.brown],
+    ["Meat and Fish", "lib/images/meat and fish.jpg", Colors.brown],
+    ["Dairy and Eggs",  "lib/images/dairy and eggs.jpg", Colors.lime],
+    ["Beverages",  "lib/images/beverages.jpg", Colors.indigo],
+    ["Bakery and Snacks",  "lib/images/bakery and snacks.jpg", Colors.purple],
+    ["Grape_juice", "lib/images/grape_juice.jpg", Colors.indigo],
     // repeat 
     ["frash fruits and vegetables", "lib/images/frash fruits and vegetables.jpg", Colors.tealAccent ],
     ["cooking oil and ghee", "lib/images/cooking oil and ghee.jpg", Colors.brown],

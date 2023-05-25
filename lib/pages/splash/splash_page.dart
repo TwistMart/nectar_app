@@ -18,18 +18,19 @@ class _SplashPageState extends State<SplashPage> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Padding(
-        padding: const EdgeInsets.all(12.0),
+        padding: const EdgeInsets.all(20.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
               width: double.infinity,
-              height: MediaQuery.of(context).size.height * 0.45,
-              padding: EdgeInsets.all(16.0),
+              height: MediaQuery.of(context).size.height * 0.40,
+              // padding: EdgeInsets.all(16.0),
+             
               child: Image.asset(
                 // 'lib/images/shoppingbagpour.jpg',
-                'lib/images/grocery_pour.jpg',
-                
+                'lib/images/grocery_pour.jpg',            
+
 
                 fit: BoxFit.cover,
               ),
@@ -39,15 +40,22 @@ class _SplashPageState extends State<SplashPage> {
                 style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
+                    fontFamily: 'Gilroy',
                     color: Colors.black),
                 children: [
                   TextSpan(text: 'Get your groceries\n'),
                   TextSpan(text: 'with nectar'),
+
+                 
+
+
+                
+
                 ],
               ),
             ),
             SizedBox(
-              height: 10,
+              height: Dimensions.height10,
             ),
             Container(
               child: CountryCodePicker(
@@ -65,17 +73,17 @@ class _SplashPageState extends State<SplashPage> {
               thickness: 1,
             ),
             SizedBox(
-              height: 10,
+              height: Dimensions.height20,
             ),
             Center(
               child: Text(
                 'Or connect with social media',
                 // textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 12, color: Colors.grey),
+                style: TextStyle(fontSize: Dimensions.font12, color: Colors.grey, fontFamily: 'Gilroy'),
               ),
             ),
             SizedBox(
-              height: 10,
+              height: Dimensions.height20,
             ),
             ElevatedButton(
               onPressed: () {
@@ -93,20 +101,23 @@ class _SplashPageState extends State<SplashPage> {
               ),
               child: Row(
                 children: [
-                  Icon(Icons.g_mobiledata, color: Colors.white, size: 35),
+                  Icon(Icons.g_mobiledata, color: Colors.white, size: Dimensions.icon30+Dimensions.icon5),
                   SizedBox(
-                    width: 5,
+                    width: Dimensions.width5,
                   ),
                   Container(
-                    width: 300,
-                    height: Dimensions.screenHeight / 13,
-                    child: Center(child: Text('Continue with Google')),
+                    width: Dimensions.width25*Dimensions.width10,
+                    height: Dimensions.screenHeight / Dimensions.font13,
+                    child: Center(child: Text('Continue with Google', style:
+                     TextStyle( fontFamily: 'Gilroy')
+                    
+                    )),
                   ),
                 ],
               ),
             ),
             SizedBox(
-              height: 20,
+              height: Dimensions.height20,
             ),
             ElevatedButton(
               onPressed: () {
@@ -127,12 +138,15 @@ class _SplashPageState extends State<SplashPage> {
                     Icons.facebook,
                   ),
                   SizedBox(
-                    width: 5,
+                    width: Dimensions.width5,
                   ),
                   Container(
-                    width: 300,
-                    height: Dimensions.screenHeight / 13,
-                    child: Center(child: Text('Continue with Facebook')),
+                    width: Dimensions.width25*Dimensions.width10,
+                    height: Dimensions.screenHeight / Dimensions.font13,
+                    child: Center(child: Text('Continue with Facebook', 
+                    style:
+                     TextStyle( fontFamily: 'Gilroy')
+                    )),
                   ),
                 ],
               ),
